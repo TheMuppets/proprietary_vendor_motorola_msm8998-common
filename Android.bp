@@ -7565,6 +7565,7 @@ cc_prebuilt_library_shared {
                 "libsensorndkbridge",
                 "libqmimotext",
                 "liblog",
+                "libqsap_sdk",
                 "libxml2",
                 "libc++",
                 "libc",
@@ -7574,7 +7575,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
