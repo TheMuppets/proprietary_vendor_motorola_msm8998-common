@@ -292,7 +292,6 @@ PRODUCT_PACKAGES += \
     libril-qc-hal-qmi \
     libril-qc-logger \
     libril-qc-ltedirectdisc \
-    libril-qc-qmi-1 \
     libril-qc-radioconfig \
     libril-qcril-hook-oem \
     librilqmiservices \
