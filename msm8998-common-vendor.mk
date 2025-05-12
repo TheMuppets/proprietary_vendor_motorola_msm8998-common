@@ -90,13 +90,18 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/10_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/10_version_qcrildb.sql \
-    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
-    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/2_version_add_wps_config.sql \
-    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/3_version_update_wps_config.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/11_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/11_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/12_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/12_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/13_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/13_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/14_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/14_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/15_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/15_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/16_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/16_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/3_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/3_version_qcrildb.sql \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/4_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/4_version_qcrildb.sql \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_qcrildb.sql \
-    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/6_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_qcrildb.sql \
+    vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/8_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/8_version_qcrildb.sql \
     vendor/motorola/msm8998-common/proprietary/vendor/radio/qcril_database/upgrade/9_version_qcrildb.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/9_version_qcrildb.sql
 
 PRODUCT_PACKAGES += \
@@ -115,6 +120,7 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     vendor.qti.hardware.iop@2.0-impl \
     vulkan.sdm660 \
+    lib-imsSDP \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -223,16 +229,19 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.qtiradio@2.1 \
     vendor.qti.hardware.radio.qtiradio@2.2 \
     vendor.qti.hardware.radio.qtiradio@2.3 \
+    vendor.qti.hardware.radio.qtiradio@2.4 \
     vendor.qti.hardware.radio.uim@1.0 \
     vendor.qti.hardware.radio.uim@1.1 \
     vendor.qti.hardware.radio.uim@1.2 \
     vendor.qti.hardware.radio.uim_remote_client@1.0 \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
+    vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
     vendor.qti.hardware.scve.objecttracker@1.0_vendor \
     vendor.qti.hardware.scve.panorama@1.0_vendor \
     vendor.qti.ims.callinfo@1.0_vendor \
     vendor.qti.ims.rcsconfig@1.0_vendor \
+    vendor.qti.ims.rcsconfig@1.1_vendor \
     vendor.qti.imsrtpservice@2.0_vendor \
     vendor.qti.imsrtpservice@2.1-service-Impl \
     vendor.qti.imsrtpservice@2.1_vendor \
@@ -367,9 +376,11 @@ PRODUCT_PACKAGES += \
     libfm-hci \
     libimscamera_jni \
     libimsmedia_jni \
+    vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.fm@1.0 \
     vendor.qti.ims.callinfo@1.0 \
     vendor.qti.ims.rcsconfig@1.0 \
+    vendor.qti.ims.rcsconfig@1.1 \
     vendor.qti.imsrtpservice@2.0 \
     vendor.qti.imsrtpservice@2.1 \
     libqcc \
@@ -380,6 +391,7 @@ PRODUCT_PACKAGES += \
     CneApp \
     TimeService \
     QtiTelephonyService \
+    ims \
     qcrilmsgtunnel \
     QtiTelephonyServicelibrary \
     com.qualcomm.qti.imscmservice-V2.0-java \

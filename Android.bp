@@ -728,6 +728,50 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "lib-imsSDP",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/lib-imsSDP.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "lib-imsdpl",
+                "lib-rtpcommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsSDP.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "lib-imsdpl",
+                "lib-rtpcommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "lib-imscmservice",
     owner: "motorola",
     strip: {
@@ -1218,6 +1262,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -1340,6 +1385,7 @@ cc_prebuilt_library_shared {
                 "lib-imsxml",
                 "lib-siputility",
                 "libqti_vndfwk_detect",
+                "lib-imsSDP",
                 "lib-imscmservice",
                 "com.qualcomm.qti.imscmservice@2.0_vendor",
                 "com.qualcomm.qti.uceservice@2.0_vendor",
@@ -1366,6 +1412,7 @@ cc_prebuilt_library_shared {
                 "lib-imsxml",
                 "lib-siputility",
                 "libqti_vndfwk_detect",
+                "lib-imsSDP",
                 "lib-imscmservice",
                 "com.qualcomm.qti.imscmservice@2.0_vendor",
                 "com.qualcomm.qti.uceservice@2.0_vendor",
@@ -2120,6 +2167,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -4014,6 +4062,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5660,6 +5709,67 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.qtiradio@2.4",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.radio.qtiradio@2.4.so",
+            ],
+            shared_libs: [
+                "android.hardware.radio@1.0",
+                "android.hardware.radio@1.1",
+                "vendor.qti.hardware.radio.qtiradio@1.0",
+                "vendor.qti.hardware.radio.qtiradio@2.0",
+                "vendor.qti.hardware.radio.qtiradio@2.1",
+                "vendor.qti.hardware.radio.qtiradio@2.2",
+                "vendor.qti.hardware.radio.qtiradio@2.3",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so",
+            ],
+            shared_libs: [
+                "android.hardware.radio@1.0",
+                "android.hardware.radio@1.1",
+                "vendor.qti.hardware.radio.qtiradio@1.0",
+                "vendor.qti.hardware.radio.qtiradio@2.0",
+                "vendor.qti.hardware.radio.qtiradio@2.1",
+                "vendor.qti.hardware.radio.qtiradio@2.2",
+                "vendor.qti.hardware.radio.qtiradio@2.3",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.uim@1.0",
     owner: "motorola",
     strip: {
@@ -5903,6 +6013,57 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.radio.uim_remote_client@1.2",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.radio.uim_remote_client@1.0",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so",
+            ],
+            shared_libs: [
+                "vendor.qti.hardware.radio.uim_remote_client@1.0",
+                "vendor.qti.hardware.radio.uim_remote_client@1.1",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.radio.uim_remote_server@1.0",
     owner: "motorola",
     strip: {
@@ -6123,6 +6284,56 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsconfig@1.1_vendor",
+    stem: "vendor.qti.ims.rcsconfig@1.1",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.ims.rcsconfig@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsconfig@1.0_vendor",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -7947,6 +8158,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.radio.uim_remote_server@1.0",
                 "vendor.qti.hardware.radio.uim_remote_client@1.0",
                 "vendor.qti.hardware.radio.uim_remote_client@1.1",
+                "vendor.qti.hardware.radio.uim_remote_client@1.2",
                 "vendor.qti.hardware.radio.lpa@1.0",
                 "vendor.qti.hardware.data.connection@1.0",
                 "vendor.qti.hardware.data.connection@1.1",
@@ -7955,6 +8167,7 @@ cc_prebuilt_library_shared {
                 "vendor.qti.hardware.radio.qtiradio@2.1",
                 "vendor.qti.hardware.radio.qtiradio@2.2",
                 "vendor.qti.hardware.radio.qtiradio@2.3",
+                "vendor.qti.hardware.radio.qtiradio@2.4",
                 "vendor.qti.hardware.data.iwlan@1.0",
                 "android.hardware.radio@1.0",
                 "android.hardware.radio.config@1.0",
@@ -8003,8 +8216,6 @@ cc_prebuilt_library_shared {
                 "qtibus",
                 "libjson",
                 "libsystem_health_mon",
-                "libpdmapper",
-                "libpdnotifier",
                 "libxml2",
                 "libdsi_netctrl",
                 "libqdp",
@@ -10561,6 +10772,55 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.camera.device@1.0",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/vendor.qti.hardware.camera.device@1.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@1.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.camera.device@1.0.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@1.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.fm@1.0",
     owner: "motorola",
     strip: {
@@ -10683,6 +10943,55 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so",
             ],
             shared_libs: [
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.ims.rcsconfig@1.1",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system_ext/lib/vendor.qti.ims.rcsconfig@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsconfig@1.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so",
+            ],
+            shared_libs: [
+                "vendor.qti.ims.rcsconfig@1.0",
                 "libhidlbase",
                 "libhidltransport",
                 "libhwbinder",
@@ -10971,6 +11280,18 @@ android_app_import {
     dex_preopt: {
         enabled: false,
     },
+    system_ext_specific: true,
+}
+
+android_app_import {
+    name: "ims",
+    owner: "motorola",
+    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
     system_ext_specific: true,
 }
 
